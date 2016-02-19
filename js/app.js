@@ -1,6 +1,6 @@
-angular.module('myApp', ['ui.router'])
+angular.module('myApp', ['ui.router', 'controllers'])
     .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function ($stateProvider, $urlRouterProvider, $locationProvider) {
-        $urlRouterProvider.otherwise('internal');
+        $urlRouterProvider.otherwise('/internal-fox');
 
         $stateProvider
             .state('internal', {

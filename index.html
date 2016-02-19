@@ -8,14 +8,16 @@
     <script src="js/app.js"></script>
     <script src="js/directives/tabsContainer.js"></script>
     <script src="js/directives/tab.js"></script>
+    <script src="js/controllers/navigation.js"></script>
     <link rel="stylesheet" href="css/main.css"/>
     <base href="/AngularTests/">
 </head>
 <body ng-app="myApp">
 
 <div>
-    <nav>
+    <nav ng-controller="NavigationController">
         <ul>
+            <li><a href="#" ng-show="isBackAvailable()" ng-click="back()">< Back</a></li>
             <li><a ui-sref="internal">Internal page</a></li>
             <li><a ui-sref="crime-history">Crime History</a></li>
             <li><a ui-sref="libertadores">Libertadores</a></li>
