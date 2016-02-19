@@ -1,5 +1,5 @@
 angular.module('myApp', ['ui.router'])
-    .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+    .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function ($stateProvider, $urlRouterProvider, $locationProvider) {
         $urlRouterProvider.otherwise('internal');
 
         $stateProvider
@@ -14,5 +14,7 @@ angular.module('myApp', ['ui.router'])
             .state('libertadores', {
                 url: '/libertadores-marketing',
                 templateUrl: 'partials/libertadores.html'
-            })
+            });
+
+        $locationProvider.html5Mode(true);
     }]);
